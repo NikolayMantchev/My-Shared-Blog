@@ -1,0 +1,94 @@
+<div class="form-container mat-elevation-z5">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input matInput placeholder="Email address" formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        Email address is required
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="password?.errors?.['required']">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+    <div class="center margin-top">
+      <button type="submit" mat-raised-button color="primary">Login</button>
+    </div>
+    <span class="center margin-top"
+      >New to our platform?
+      <a class="sign-up-link" routerLink="/register">Sign up!</a></span
+    >
+  </form>
+</div>
+
+<!-- <form>
+  <div>
+    <label for="username">Username:</label>
+    <input
+      #username="ngActor"
+      [class.error-input]="username.invalid && username.touched"
+      name="username"
+      id="username"
+      type="text"
+      ngActor
+      ngRequired
+      [ngMinLength]="5"
+    />
+
+    <ng-container *ngIf="username.invalid && username.touched">
+      <div class="alert alert-danger" *ngIf="!!username.errors['ngRequired']">
+        Username is required.
+      </div>
+
+      <div class="alert alert-danger" *ngIf="!!username.errors['ngMinLength']">
+        Username should be at least 5 symbols.
+      </div>
+    </ng-container>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input
+      #password="ngActor"
+      [class.error-input]="password.invalid && password.touched"
+      name="password"
+      id="password"
+      type="password"
+      ngActor
+      ngRequired
+      [ngMinLength]="5"
+    />
+
+    <ng-container *ngIf="password.invalid && password.touched">
+      <div class="alert alert-danger" *ngIf="!!password.errors['ngRequired']">
+        Password is required.
+      </div>
+
+      <div class="alert alert-danger" *ngIf="!!password.errors['ngMinLength']">
+        Password should be at least 5 symbols.
+      </div>
+    </ng-container>
+  </div>
+  <button
+    [disabled]="username.invalid || password.invalid"
+    (click)="
+      login({
+        username: username.value,
+        password: password.value
+      })
+    "
+    type="button"
+  >
+    Login
+  </button>
+</form> -->

@@ -1,0 +1,5 @@
+<div class="card container">
+  <div class="standart-card" *ngFor="let user of blogers$ | async">
+    <app-bloger-list-item [item]="user"> </app-bloger-list-item>
+  </div>
+</div>
