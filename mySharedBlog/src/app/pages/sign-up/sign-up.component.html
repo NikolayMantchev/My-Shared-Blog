@@ -1,0 +1,52 @@
+<div class="form-container mat-elevation-z5">
+    <h1>Sign Up</h1>
+    <form>
+        <mat-form-field>
+            <input
+                matInput
+                placeholder="Email address"
+                #userEmail
+                required
+                formControlName="email"
+            />
+            <mat-error *ngIf=""> Email address is required </mat-error>
+            <mat-error *ngIf=""> Please enter a valid email address </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input
+                matInput
+                type="password"
+                placeholder="Password"
+                #userPwd
+                required
+                formControlName="password"
+            />
+            <mat-error *ngIf=""> Password is required </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input
+                matInput
+                type="password"
+                placeholder="Repeat Password"
+                #userPwd
+                required
+                formControlName="password"
+            />
+            <mat-error *ngIf=""> Password is required </mat-error>
+        </mat-form-field>
+        <div class="center margin-top">
+            <button
+                type="submit"
+                (click)="authService.SignUp(userEmail.value, userPwd.value)"
+                mat-raised-button
+                color="primary"
+            >
+                Register
+            </button>
+        </div>
+        <span class="center margin-top"
+            >Allready have an account?
+            <a class="sign-up-link" routerLink="/sign-in">Sign in!</a></span
+        >
+    </form>
+</div>

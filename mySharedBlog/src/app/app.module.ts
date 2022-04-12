@@ -4,50 +4,52 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent} from './app.component';
-import { CoreModule } from './core/core.module';
-import { BlogerModule } from './bloger/bloger.module';
-// import { HomeComponent } from './pages/home/home.component';
-import { DefaultViewComponent } from './pages/default-view/default-view.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './pages/login/login.component';
-import { CustomForms } from './custom-forms/custom-forms.module';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { AuthService } from "./services/auth.service";
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeComponent,
-    DefaultViewComponent,
+    HeaderComponent,
+    HomeComponent,
+    SignInComponent,
+    SignUpComponent,
     PageNotFoundComponent,
-    LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
-    CoreModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     BrowserAnimationsModule,
-    CustomForms,
-    BlogerModule,
     MatFormFieldModule, 
     FormsModule, 
     ReactiveFormsModule,
     MatIconModule,
     MatInputModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    
- 
+    AppRoutingModule, 
   ],
   providers: [
-    
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

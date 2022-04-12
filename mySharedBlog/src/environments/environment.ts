@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  
   firebase: {
     projectId: 'bloger-fa49f',
     appId: '1:642232990218:web:6f927417301b8af2767df3',
@@ -11,7 +12,7 @@ export const environment = {
     authDomain: 'bloger-fa49f.firebaseapp.com',
     messagingSenderId: '642232990218',
   },
-  production: false
+  production: true,
 };
 
 /*

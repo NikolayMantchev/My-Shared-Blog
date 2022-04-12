@@ -17,8 +17,8 @@ ul>li {
 
 
 ul>li:last-of-type {
-    flex: 1 1 auto;
-    text-align: end;
+    flex: 2 2 auto;
+    text-align: right;
 }
 button{
     background-color: #dad2fc8d;
