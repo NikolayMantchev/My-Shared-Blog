@@ -15,10 +15,10 @@ const routes: Routes = [
     redirectTo: 'home'
   },
 
-  {
-    path: '',
-    component: HeaderComponent,
-  },
+  // {
+  //   path: '',
+  //   component: HeaderComponent,
+  // },
   {
     path: 'home',
     component: HomeComponent,

@@ -14,12 +14,12 @@ ul>li {
     display: inline-block;
      margin-right: 20px;
 }
-
-
 ul>li:last-of-type {
-    flex: 2 2 auto;
-    text-align: right;
+    flex: 1 1 auto;
+    text-align: end;
 }
+
+
 button{
     background-color: #dad2fc8d;
     color: rgb(86, 86, 86);

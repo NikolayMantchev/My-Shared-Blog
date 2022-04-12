@@ -4,13 +4,13 @@
             <li><button routerLink="/home">Home</button></li>
             <!-- <li><button routerLink="/bloger">Blogers</button></li> -->
 
-            <li *ngIf="!authService.userData as user">
+            <li class="btn-nav" *ngIf="!authService.userData as user">
                 <button routerLink="/sign-in">Login</button>
             </li>
-            <li *ngIf="!authService.userData as user">
+            <li class="btn-nav" *ngIf="!authService.userData as user">
                 <button routerLink="/register-user">Register</button>
             </li>
-            <li *ngIf="authService.userData as user">
+            <li class="btn-logout" *ngIf="authService.userData as user">
                 Current user: <strong>{{ user.email }}</strong>
 
                 <button (click)="authService.SignOut()">Log out</button>
