@@ -14,11 +14,6 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'home'
   },
-
-  // {
-  //   path: '',
-  //   component: HeaderComponent,
-  // },
   {
     path: 'home',
     component: HomeComponent,

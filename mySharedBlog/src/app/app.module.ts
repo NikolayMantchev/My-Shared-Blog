@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { InjectionToken, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +27,7 @@ import { HeaderComponent } from './pages/header/header.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SignInComponent,
+    SignInComponent, 
     SignUpComponent,
     PageNotFoundComponent,
    
