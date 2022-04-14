@@ -27,6 +27,7 @@ import { CreatePostComponent } from './pages/posts/create-post/create-post.compo
 import { PostService } from './services/post.service';
 import { EditPostComponent } from './pages/posts/edit-post/edit-post.component';
 import { HomeCardComponent } from './pages/posts/home-card/home-card.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { HomeCardComponent } from './pages/posts/home-card/home-card.component';
     CardComponent,
     CreatePostComponent,
     EditPostComponent,
-    HomeCardComponent
+    HomeCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

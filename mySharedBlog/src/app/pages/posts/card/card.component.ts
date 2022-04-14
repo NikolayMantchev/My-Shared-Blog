@@ -25,7 +25,8 @@ export class CardComponent implements OnInit {
   }
  
   removePost (Post : IPost){
-    if (confirm(`Are you sure deleting ${Post.title}`)) {
+    // if (confirm(`Are you sure deleting ${Post.title}`)) {
+      {
       this.postService.deletePost(Post)
   }
 }

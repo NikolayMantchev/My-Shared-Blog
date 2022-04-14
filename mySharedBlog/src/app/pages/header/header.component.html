@@ -16,9 +16,11 @@
             <li class="btn-nav" *ngIf="!authService.userData as user">
                 <button routerLink="/register-user">Register</button>
             </li>
-            <li class="btn-logout" *ngIf="authService.userData as user">
-                Current user: <strong>{{ user.email }}</strong>
-                <button (click)="authService.SignOut()">Log out</button>
+            <li *ngIf="authService.userData as user">
+                user: <strong>{{ user.email }}</strong>
+                <button class="btn-logout" (click)="authService.SignOut()">
+                    Log out
+                </button>
             </li>
         </ul>
     </div>
