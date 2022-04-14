@@ -1,9 +1,10 @@
 
-.form-container {
+
+.form-card-container {
     display: block;
-    max-width: 300px;
+    max-width: 600px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 30px;
     
     background: rgba(253, 228, 139, 0.354);
     padding: 68px;
@@ -13,30 +14,30 @@
 mat-form-field {
   width: 100%;
 }
-.center {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* .margin-top {
-    margin-top: 16px !important;
-  } */
-  .text-center {
-    text-align: center;
-  }
 button{
+	display: block;
 	margin: 40px;
     background-color: #dad2fc8d;
     color: rgb(97, 99, 99);
-
     border: none;
-    font-size: x-large;
+    font-size: large;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     margin-top: 12px;
-    width: 120px;
+    width: 100px;
     border-radius: 4px;
     
 }
 button:hover{
     background-color: azure;
 }
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .margin-top {
+    margin-top: 16px !important;
+  }
+  .text-center {
+    text-align: center;
+  }

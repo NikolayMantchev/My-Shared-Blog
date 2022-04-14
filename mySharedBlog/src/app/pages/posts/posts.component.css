@@ -1,0 +1,19 @@
+.container{
+	margin-right: 48px;
+	display: flex;
+	/* justify-content: center; */
+	padding-top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.form-container {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 60px;
+    
+    background: rgba(253, 228, 139, 0.354);
+    padding: 68px;
+    border-radius: 16px;
+  
+}

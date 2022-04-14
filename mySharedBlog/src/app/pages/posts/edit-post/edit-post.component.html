@@ -1,0 +1,41 @@
+<div class="form-container mat-elevation-z5">
+    <h1>Edit Post</h1>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+        <mat-form-field>
+            <input
+                matInput
+                placeholder="Title"
+                #title
+                required
+                formControlName="title"
+            />
+            <mat-error *ngIf=""> Title is required </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input
+                matInput
+                type="text"
+                placeholder="Image Url"
+                #imageUrl
+                required
+                formControlName="imageUrl"
+            />
+            <mat-error *ngIf=""> Image is required </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Textarea</mat-label>
+            <textarea
+                matInput
+                type="text"
+                #text
+                formControlName="text"
+            ></textarea>
+        </mat-form-field>
+
+        <div class="center margin-top">
+            <button type="submit" mat-raised-button color="primary">
+                Edit Post
+            </button>
+        </div>
+    </form>
+</div>

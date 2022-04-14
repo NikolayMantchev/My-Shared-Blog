@@ -10,6 +10,7 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 import { environment } from '../environments/environment';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { AuthService } from "./services/auth.service";
@@ -20,6 +21,11 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { CardComponent } from './pages/posts/card/card.component';
+import { CreatePostComponent } from './pages/posts/create-post/create-post.component';
+import { PostService } from './services/post.service';
+import { EditPostComponent } from './pages/posts/edit-post/edit-post.component';
 
 
 @NgModule({
@@ -30,12 +36,15 @@ import { HeaderComponent } from './pages/header/header.component';
     SignInComponent, 
     SignUpComponent,
     PageNotFoundComponent,
-   
+    PostsComponent,
+    CardComponent,
+    CreatePostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
@@ -46,10 +55,12 @@ import { HeaderComponent } from './pages/header/header.component';
     ReactiveFormsModule,
     MatIconModule,
     MatInputModule,
+    MatCardModule,
     AppRoutingModule, 
   ],
   providers: [
-    AuthService
+    AuthService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })

@@ -2,6 +2,14 @@
     <div>
         <ul>
             <li><button routerLink="/home">Home</button></li>
+            <li class="btn-nav" *ngIf="authService.userData as user">
+                <button routerLink="/posts">My Posts</button>
+            </li>
+            <li class="btn-nav" *ngIf="authService.userData as user">
+                <button routerLink="/create-post" routerLinkActive="active">
+                    Add Post
+                </button>
+            </li>
             <li class="btn-nav" *ngIf="!authService.userData as user">
                 <button routerLink="/sign-in">Login</button>
             </li>
