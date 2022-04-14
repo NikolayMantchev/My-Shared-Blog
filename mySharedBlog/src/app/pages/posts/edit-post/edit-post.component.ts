@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { log } from 'console';
 import { PostService } from 'src/app/services/post.service';
 
 
@@ -13,7 +12,8 @@ import { PostService } from 'src/app/services/post.service';
 export class EditPostComponent implements OnInit {
   public editForm: FormGroup
   postRef: any;
-
+  postId = this.act.snapshot.paramMap.get('id');
+  
   constructor(
     public postService: PostService,
     public formBuilder: FormBuilder,
@@ -21,15 +21,16 @@ export class EditPostComponent implements OnInit {
     private router: Router
   ){
     this.editForm = this.formBuilder.group({
+      // id: [''],
       title: [''],
       imageUrl: [''],
       text: ['']
     })
+    console.log(this.editForm);
   }
+  
   ngOnInit(): void {
-    const id = this.act.snapshot.paramMap.get('id');
-    console.log(id);
-    
+    const id = this.act.snapshot.paramMap.get('id');    
 
     this.postService.getPostDoc(id).subscribe(res =>{
       this.postRef = res;

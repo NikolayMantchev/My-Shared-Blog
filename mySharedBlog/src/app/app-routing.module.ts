@@ -30,7 +30,7 @@ const routes: Routes = [
     component: CreatePostComponent ,
   },
   {
-    path: 'update-post',
+    path: 'posts/update-post/:id',
     component: EditPostComponent ,
   },
   {
@@ -50,7 +50,7 @@ const routes: Routes = [
   component: SignUpComponent 
   },
   {
-    path: '404',
+    path: '**',
     component: PageNotFoundComponent
   }
 ];

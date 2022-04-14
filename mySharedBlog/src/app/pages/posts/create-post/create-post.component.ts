@@ -11,7 +11,7 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class CreatePostComponent implements OnInit {
   public postForm: FormGroup
-  
+
   constructor(
     public postService: PostService,
     public formBuilder: FormBuilder,
@@ -20,7 +20,8 @@ export class CreatePostComponent implements OnInit {
     this.postForm = this.formBuilder.group({
       title: [''],
       imageUrl: [''],
-      text: ['']
+      text: [''],
+      creator: [localStorage.getItem("user")]
     })
   }
   ngOnInit(): void {

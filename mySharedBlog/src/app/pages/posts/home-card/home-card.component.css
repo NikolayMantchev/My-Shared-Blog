@@ -3,21 +3,16 @@
 .form-card-container {
     display: inline-block;
     max-width: 400px;
-    margin: 25px;
+    margin: 45px;
     margin-top: 30px;
     
     background: rgba(253, 228, 139, 0.354);
-    padding: 28px;
+    padding: 48px;
     border-radius: 16px;
   
 }
-/* mat-form-field {
+mat-form-field {
   width: 100%;
-} */
-.mat-card-image:first-child {
-  /* margin-top: -16px; */
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 button{
 	display: block;
@@ -40,27 +35,13 @@ button:hover{
     justify-content: center;
   }
   
-  /* .margin-top {
+  .margin-top {
     margin-top: 16px !important;
-  } */
+  }
   .text-center {
     text-align: center;
   }
-  /* .mat-card-image {
-    border-radius: 5px;
+  .mat-card-image {
     max-width: 400px;
-    max-height: 400px;
-  } */
-  mat-card-title{
-    margin: 12px;
-    padding-bottom: 12px;
-    text-align: center;
+    max-height: 300px;
   }
-  .title-text{
-    align-items: center;
-  }
-  .mat-card-header {
-    display: block;
-    margin: 3px;
-    
-}

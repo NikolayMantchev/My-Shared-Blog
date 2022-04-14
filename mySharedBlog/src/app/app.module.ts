@@ -26,6 +26,7 @@ import { CardComponent } from './pages/posts/card/card.component';
 import { CreatePostComponent } from './pages/posts/create-post/create-post.component';
 import { PostService } from './services/post.service';
 import { EditPostComponent } from './pages/posts/edit-post/edit-post.component';
+import { HomeCardComponent } from './pages/posts/home-card/home-card.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { EditPostComponent } from './pages/posts/edit-post/edit-post.component';
     PostsComponent,
     CardComponent,
     CreatePostComponent,
-    EditPostComponent
+    EditPostComponent,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,

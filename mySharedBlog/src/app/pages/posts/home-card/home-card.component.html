@@ -3,7 +3,7 @@
     class="form-card-container mat-elevation-z5"
 >
     <div>
-        <div class="title-text">
+        <div>
             <mat-card-header>
                 <mat-card-title>{{ post.title }}</mat-card-title>
             </mat-card-header>
@@ -22,21 +22,5 @@
                 </p>
             </mat-card-content>
         </div>
-        <div>
-            <mat-card-actions class="center margin-top">
-                <button
-                    [routerLink]="['update-post', post.id]"
-                    routerLinkActive="active"
-                    class="button"
-                >
-                    Edit
-                </button>
-                <button (click)="removePost(post)" class="button" mat-button>
-                    Delete
-                </button>
-            </mat-card-actions>
-        </div>
     </div>
 </mat-card>
-
-<!-- /{{ post.id }} -->
