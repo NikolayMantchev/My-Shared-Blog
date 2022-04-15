@@ -37,11 +37,6 @@ const routes: Routes = [
     path: 'posts/card',
     component: CardComponent,
   },
-  // {
-  //   path: 'bloger',
-  //   loadChildren: () => import('./bloger/bloger.module').then(m => m.BlogerModule) //,canActivate: [AuthGuard]
-  // },
- 
   {
     path: 'sign-in',
     component: SignInComponent

@@ -2,18 +2,18 @@
 
 .form-card-container {
     display: inline-block;
-    max-width: 400px;
-    margin: 25px;
-    margin-top: 30px;
+    max-width: 500px;
+    margin: 55px;
+    margin-top: 35px;
     
     background: rgba(253, 228, 139, 0.354);
     padding: 28px;
     border-radius: 16px;
   
 }
-/* mat-form-field {
+mat-form-field {
   width: 100%;
-} */
+}
 .mat-card-image:first-child {
   /* margin-top: -16px; */
   border-top-left-radius: 5px;
@@ -40,9 +40,9 @@ button:hover{
     justify-content: center;
   }
   
-  /* .margin-top {
+  .margin-top {
     margin-top: 16px !important;
-  } */
+  }
   .text-center {
     text-align: center;
   }

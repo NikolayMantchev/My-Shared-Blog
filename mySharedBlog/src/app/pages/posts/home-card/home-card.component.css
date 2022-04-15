@@ -1,15 +1,14 @@
 
 
 .form-card-container {
-    display: inline-block;
-    max-width: 400px;
-    margin: 45px;
-    margin-top: 30px;
-    
-    background: rgba(253, 228, 139, 0.354);
-    padding: 48px;
-    border-radius: 16px;
-  
+  display: inline-flex;
+  max-width: 400px;
+  margin: 55px;
+  margin-top: 35px;
+  background: rgba(253, 228, 139, 0.354);
+  padding: 39px;
+  border-radius: 16px;
+
 }
 mat-form-field {
   width: 100%;
@@ -41,7 +40,15 @@ button:hover{
   .text-center {
     text-align: center;
   }
-  .mat-card-image {
-    max-width: 400px;
-    max-height: 300px;
+  mat-card-title{
+    margin: 12px;
+    padding-bottom: 12px;
+    text-align: center;
   }
+  .title-text{
+    align-items: center;
+  } 
+  /* .mat-card-image {
+    max-width: 400px;
+    max-height: 400px;
+  } */
