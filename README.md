@@ -1,7 +1,7 @@
 # My-Shared-Blog
 Angular-Firebase SoftUni Exam
 
-This Application is in working progress with learning purpouse.
+This Application is in working progress with learning purpose.
 
 run npm i && npm start
 
