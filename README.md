@@ -1,5 +1,6 @@
 # My-Shared-Blog
 Angular-Firebase SoftUni Exam
+[VISIT HERE](https://simple-blog-beta-two.vercel.app/home)
 
 This Application is in working progress with learning purpose.
 

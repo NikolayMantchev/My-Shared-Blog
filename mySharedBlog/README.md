@@ -1,5 +1,7 @@
 # My Shared Blog
 
+https://simple-blog-beta-two.vercel.app/home
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
