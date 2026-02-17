@@ -2,13 +2,37 @@
 
 .form-card-container {
   display: inline-flex;
+  flex-direction: column;
   max-width: 400px;
+  height: 100%;
+  min-height: 420px;
   margin: 55px;
   margin-top: 35px;
   background: rgba(253, 228, 139, 0.354);
   padding: 39px;
   border-radius: 16px;
+  box-sizing: border-box;
+}
 
+.card-content-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.form-card-container .mat-card-content {
+  padding-bottom: 0;
+}
+
+.form-card-container .mat-card-content p {
+  margin: 0;
 }
 mat-form-field {
   width: 100%;
@@ -48,7 +72,7 @@ button:hover{
   .title-text{
     align-items: center;
   } 
-  /* .mat-card-image {
-    max-width: 400px;
-    max-height: 400px;
-  } */
+.form-card-container .mat-card-image {
+  max-height: 200px;
+  object-fit: cover;
+}

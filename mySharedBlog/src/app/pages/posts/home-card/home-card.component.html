@@ -2,7 +2,7 @@
     *ngFor="let post of Post"
     class="form-card-container mat-elevation-z5"
 >
-    <div>
+    <div class="card-inner">
         <div>
             <mat-card-header>
                 <mat-card-title>{{ post.title }}</mat-card-title>
@@ -15,11 +15,9 @@
                 alt="{{ post.title }}"
             />
         </div>
-        <div>
+        <div class="card-content-wrap">
             <mat-card-content>
-                <p>
-                    {{ post.text }}
-                </p>
+                <p>{{ post.text }}</p>
             </mat-card-content>
         </div>
     </div>
